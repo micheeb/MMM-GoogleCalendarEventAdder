@@ -1,0 +1,64 @@
+
+[26.07.2023 20:11.30.441] [LOG]   There was an error contacting the Calendar service:  GaxiosError: unauthorized_client
+    at Gaxios._request (/home/jtate/MagicMirror/node_modules/gaxios/build/src/gaxios.js:140:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/jtate/MagicMirror/node_modules/google-auth-library/build/src/auth/oauth2client.js:178:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/jtate/MagicMirror/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.requestAsync (/home/jtate/MagicMirror/node_modules/google-auth-library/build/src/auth/oauth2client.js:421:21) {
+  response: {
+    config: {
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: 'refresh_token=1%2F%2F01nBeTZlsXwHXCgYIARAAGAESNwF-L9IrQ9FU_k-BTVrtfp4Q0myKM7flsg0n7hN0Ur5ObCQZLUAeflIURdTWjbSU6aeoHwJPjrE&client_id=375183563635-al9ljf3nmqelto8gubepq0hpl1jpienp.apps.googleusercontent.com&client_secret=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&grant_type=refresh_token',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: 'refresh_token=1%2F%2F01nBeTZlsXwHXCgYIARAAGAESNwF-L9IrQ9FU_k-BTVrtfp4Q0myKM7flsg0n7hN0Ur5ObCQZLUAeflIURdTWjbSU6aeoHwJPjrE&client_id=375183563635-al9ljf3nmqelto8gubepq0hpl1jpienp.apps.googleusercontent.com&client_secret=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&grant_type=refresh_token',
+      validateStatus: [Function: validateStatus],
+      responseType: 'json'
+    },
+    data: { error: 'unauthorized_client', error_description: 'Unauthorized' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Thu, 27 Jul 2023 00:11:30 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 401,
+    statusText: 'Unauthorized',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  config: {
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: 'refresh_token=1%2F%2F01nBeTZlsXwHXCgYIARAAGAESNwF-L9IrQ9FU_k-BTVrtfp4Q0myKM7flsg0n7hN0Ur5ObCQZLUAeflIURdTWjbSU6aeoHwJPjrE&client_id=375183563635-al9ljf3nmqelto8gubepq0hpl1jpienp.apps.googleusercontent.com&client_secret=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&grant_type=refresh_token',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/8.9.0',
+      'x-goog-api-client': 'gl-node/18.15.0',
+      Accept: 'application/json'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: 'refresh_token=1%2F%2F01nBeTZlsXwHXCgYIARAAGAESNwF-L9IrQ9FU_k-BTVrtfp4Q0myKM7flsg0n7hN0Ur5ObCQZLUAeflIURdTWjbSU6aeoHwJPjrE&client_id=375183563635-al9ljf3nmqelto8gubepq0hpl1jpienp.apps.googleusercontent.com&client_secret=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&grant_type=refresh_token',
+    validateStatus: [Function: validateStatus],
+    responseType: 'json'
+  },
+  code: '401'
+}
+[26.07.2023 20:11.50.262] [LOG]   Shutting down server...
+[26.07.2023 20:11.50.263] [LOG]   Stopping module helper: mmm-systemtemperature
+[26.07.2023 20:11.50.263] [LOG]   Stopping module helper: MMM-DarkSkyForecast
+[26.07.2023 20:11.50.263] [LOG]   Stopping module helper: calendar
+[26.07.2023 20:11.50.263] [LOG]   Stopping module helper: MMM-Todoist
+[26.07.2023 20:11.50.264] [LOG]   Stopping module helper: MMM-GoogleCalendarEventAdder
+[26.07.2023 20:11.50.264] [LOG]   Stopping module helper: MMM-KeyPress
+[26.07.2023 20:11.50.265] [LOG]   Node_helpers stopped ...
