@@ -1,6 +1,9 @@
 # MMM-GoogleCalendarEventAdder
 Adds, edits, or deletes an event from a google calendar, using API. Currently tokens require user reauthorization approximately every 7 days. Any progress towards persistent or tokens that will be automatically refreshed will be posted. 
 
+# Additional Requirements
+This module currently requires MMM-SimpleKeyboard also in my git. 
+
 # Installation
 
 To install the module, use your terminal to:
