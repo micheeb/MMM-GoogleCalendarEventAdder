@@ -324,7 +324,9 @@ Module.register("MMM-GoogleCalendarEventAdder", {
         confirmButton.textContent = "Confirm";
         confirmButton.style.cssText = "float: right; margin-left: 10px;"; // Float to the right with some margin
         confirmButton.addEventListener("click", () => {
+            console.log ("confirm event listener hit" + this.currentEventId);
             if (this.currentEventId) { // Only delete if an event ID is present
+                console.log ("confirm delete");
                 this.deleteEvent(this.currentEventId);
             }
             document.body.removeChild(modal);
@@ -464,6 +466,7 @@ Module.register("MMM-GoogleCalendarEventAdder", {
             let payload = {
                 eventId: this.currentEventId
             };
+        console.log ("socket notification sent to delete event");
         this.sendSocketNotification("DELETE_CALENDAR_EVENT", payload);
         this.closeForm();
        // this.sendNotification("REFRESH_CALENDAR");
@@ -477,7 +480,6 @@ Module.register("MMM-GoogleCalendarEventAdder", {
             // Event listener for the event being clicked on the calendar
             switch (notification) {
                 case "EDIT_CALENDAR_EVENT":
-                    console.log("About to populate form with event details:", payload);
                     // Populate the form with event details
                     this.openForm(false);
                     this.populateFormWithEventDetails(payload);
@@ -522,7 +524,8 @@ Module.register("MMM-GoogleCalendarEventAdder", {
 
         populateFormWithEventDetails: function(eventDetails) {
             console.log("Inside populateFormWithEventDetails.");
-
+            let eid = document.getElementById("id");
+            console.log(eid);
             // Populate the event title
             document.getElementById("eventTitle").value = eventDetails.title;
 
@@ -552,6 +555,7 @@ Module.register("MMM-GoogleCalendarEventAdder", {
 
             // Store the event ID in a hidden field or as a module variable
             this.currentEventId = eventDetails.id;
+            console.log(eventDetails.id);
             
                 this.attachKeyboardToInput();
         },

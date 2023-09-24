@@ -29,6 +29,7 @@ module.exports = NodeHelper.create({
 	      this.updateCalendarEvent(payload);
 	      break;
 	  case "DELETE_CALENDAR_EVENT":
+      console.log ("socket received to delete event");
 	      this.deleteCalendarEvent(payload);
 	      break;
       }
