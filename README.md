@@ -24,16 +24,18 @@ This process is similar to that used by randomBrainstormer's MMM-GoogleCalendar.
 6. Run this command from the MMM-GoogleCalendarEventAdder directory: `node authenticate.js` and follow the instructions that will display in the console. 
 
 ## Sample Config
-'''javascript
+```javascript
+
         {
 			module: 'MMM-GoogleCalendarEventAdder',
 			position: 'top_right', 
 			config: {
 				//no config options exist
-		},			
-'''
+		},	
 
-# Screenshots
+```
+
+## Screenshots
 ![screenshot](https://github.com/tjat84/MMM-GoogleCalendarEventAdder/blob/acdaec83f70b661e92c1537108e85b91c52b1e3c/main_snippet.png)
 
 ![screenshot](https://github.com/tjat84/MMM-GoogleCalendarEventAdder/blob/acdaec83f70b661e92c1537108e85b91c52b1e3c/delete_snip.png)
