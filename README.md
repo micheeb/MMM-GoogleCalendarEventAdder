@@ -1,10 +1,10 @@
 # MMM-GoogleCalendarEventAdder
 Adds, edits, or deletes an event from a google calendar, using API. Currently tokens require user reauthorization approximately every 7 days. Any progress towards persistent or tokens that will be automatically refreshed will be posted. 
 
-# Prerequesite
+## Prerequesite
 This module currently requires MMM-SimpleKeyboard and my fork of MMRIZE's fantastic MMM-CalendarExt3 module. Both are also in my git.  
 
-# Installation
+## Installation
 
 To install the module, use your terminal to:
 
@@ -23,15 +23,15 @@ This process is similar to that used by randomBrainstormer's MMM-GoogleCalendar.
 5. [Enable Google Calendar API](https://console.cloud.google.com/apis/library/calendar-json.googleapis.com). Select the same project as in step 1.
 6. Run this command from the MMM-GoogleCalendarEventAdder directory: `node authenticate.js` and follow the instructions that will display in the console. 
 
-# Sample Config
----js
-			{
+## Sample Config
+'''javascript
+        {
 			module: 'MMM-GoogleCalendarEventAdder',
 			position: 'top_right', 
 			config: {
 				//no config options exist
-			},
----
+		},			
+'''
 
 # Screenshots
 ![screenshot](https://github.com/tjat84/MMM-GoogleCalendarEventAdder/blob/acdaec83f70b661e92c1537108e85b91c52b1e3c/main_snippet.png)
