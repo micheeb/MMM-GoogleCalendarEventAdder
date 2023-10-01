@@ -409,6 +409,10 @@ Module.register("MMM-GoogleCalendarEventAdder", {
         }
     },
 
+    capitalizeFirstLetter: function(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    },
+
     // Function to add an event
     addEvent: function () {
         let eventTitleElement = document.getElementById("eventTitle");
@@ -416,6 +420,9 @@ Module.register("MMM-GoogleCalendarEventAdder", {
         let startTime = document.getElementById("startTime").value;
         let endTime = document.getElementById("endTime").value;
         let allDay = document.getElementById("allDay").checked;
+    
+     // Capitalize the first letter of the event title
+        eventTitle = this.capitalizeFirstLetter(eventTitle);
     
     // Check if a name button is selected
         const selectedButton = document.querySelector('.nameButton.selected');
